@@ -70,5 +70,28 @@ def productExceptSelf(nums):
       result.append(preList[i] * postList[i])
   
   return result
+
+# Time complexity: O(n) even after using three different for loops because these loops are used for different array operations
             
+```
+
+
+[Sort Colors](https://leetcode.com/problems/sort-colors/description/)
+
+```python
+
+def sortColors(nums):
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        while nums != sorted(nums):
+            for i in range(len(nums)):
+                if nums[i] ==0:
+                    nums.pop(i)
+                    nums.insert(0,0)
+                elif nums[i] ==2:
+                    nums.pop(i)
+                    nums.append(2)
+
+# Time Complexity: O(n) for using a while loop
 ```
